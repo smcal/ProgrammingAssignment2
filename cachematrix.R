@@ -66,7 +66,7 @@ cacheSolve <- function(makeCacheMatrixType, ...)
   ## If we are here then the inverse does not exist so go ahead and calculate
   ## and store the result
   origMatrix <- makeCacheMatrixType$getMatrix()
-  matrixInverse <- solve( origMatrix )
+  matrixInverse <- solve( origMatrix, ... )
   makeCacheMatrixType$setMatrixInverse( matrixInverse )
   matrixInverse
 }
